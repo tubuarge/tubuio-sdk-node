@@ -1,3 +1,4 @@
 /node_modules/
-test.js
+deneme.js
 package-lock.json
+.vscode/launch.json
