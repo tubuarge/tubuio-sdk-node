@@ -16,7 +16,7 @@ class Api {
         return this.axios.get(url);
     }
 
-    integrationSend(shortID, method, tag = '', data) {
+    integrationSend(shortID, method, tag = '', data = '') {
         let url = `/int/${shortID}/${method}`;
         if (tag) url += `/${tag}`;
         return this.axios.post(url, data);
