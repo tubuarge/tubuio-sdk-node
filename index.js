@@ -2,7 +2,7 @@ const Tubu = require('./lib/Tubu');
 
 const tubu = new Tubu('02cd0336-c424-46ae-ac8c-d0b84dd949b4');
 
-const basicContract = tubu.createContract('c6da6a7441804bca');
+const basicContract = tubu.contract('c6da6a7441804bca');
 
 basicContract
     .send('addItem', { args: ['xyz', 13, false] })
