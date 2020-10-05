@@ -33,10 +33,6 @@
         "prettier": "^2.1.2",
         "sinon": "^9.0.3"
     },
-    "directories": {
-        "lib": "lib",
-        "utils": "utils"
-    },
     "keywords": [
         "tubuio",
         "sdk"

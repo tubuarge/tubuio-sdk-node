@@ -1,0 +1,9 @@
+/node_modules/
+package-lock.json
+.vscode
+.eslintrc.js
+prettier.config.js
+/examples
+/coverage
+/contracts
+/test
