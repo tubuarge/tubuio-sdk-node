@@ -4,9 +4,7 @@
   </a>
 </p>
 
-### JavaScript SDK for [tubu.io](https://www.tubu.io)
-
----
+JavaScript SDK for [tubu.io](https://www.tubu.io)
 
 ## Example Usage
 
@@ -30,9 +28,7 @@ contract
     });
 ```
 
-### For more details visit the [docs page](https://tubuarge.github.io/tubuio-sdk-docs/#/node).
-
----
+For more details visit the [docs page](https://tubuarge.github.io/tubuio-sdk-docs/#/node).
 
 ## License
 
