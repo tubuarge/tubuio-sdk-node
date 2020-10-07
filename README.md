@@ -1,6 +1,6 @@
 <p align="left" style="margin: 10px 0 25px 0">
-  <a href="https://github.com/tubuarge/folder-builder">
-    <img alt="tubu.io logo" src="./logo.png" width="200"/>
+  <a href="https://github.com/tubuarge/tubuio-sdk-node">
+    <img alt="tubu.io logo" src="https://raw.githubusercontent.com/tubuarge/tubuio-sdk-node/master/logo.png" width="200"/>
   </a>
 </p>
 
