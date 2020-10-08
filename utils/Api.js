@@ -22,12 +22,18 @@ class Api {
     integrationCall(shortID, method, args = null, tag = '') {
         let url = `/int/${shortID}/${method}`;
         if (tag) url += `/${tag}`;
-        if (args) return this.axios.get(url, { params: { args } });
+        if (args)
+            return this.axios
+                .get(url, { params: { args } })
+                .then((response) => response.body.data)
+                .catch((err) => {
+                    throw new Error(err.response.data.message);
+                });
         return this.axios
             .get(url)
             .then((response) => response.body.data)
             .catch((err) => {
-                throw new Error(err.data.message);
+                throw new Error(err.response.data.message);
             });
     }
 
@@ -38,7 +44,7 @@ class Api {
             .post(url, data)
             .then((response) => response.body.data)
             .catch((err) => {
-                throw new Error(err.data.message);
+                throw new Error(err.response.data.message);
             });
     }
 }
