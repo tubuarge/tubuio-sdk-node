@@ -92,7 +92,7 @@ describe('TUBU', function () {
     let createStub;
     beforeEach(function () {
         tubu = new Tubu('this is the ApiKey');
-        createStub = sinon.stub(tubu, 'createContract');
+        createStub = sinon.stub(tubu, 'contract');
     });
     afterEach(function () {
         createStub.restore();
@@ -111,8 +111,8 @@ describe('TUBU', function () {
             'this is the ApiKey'
         );
     });
-    it('calls the createContract method with given shortID', function () {
-        tubu.createContract('this is the ShortID');
+    it('calls the contract method with given shortID', function () {
+        tubu.contract('this is the ShortID');
         expect(createStub.calledOnce).to.be.true;
         expect(createStub.args[0]).to.contains('this is the ShortID');
     });
