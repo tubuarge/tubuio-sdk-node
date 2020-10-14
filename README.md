@@ -21,7 +21,7 @@ const contract = app.contract('CONTRACT_SHORTID');
 contract
     .send('METHOD_NAME', { args: [], account: 'ACCOUNT_ADDRESS' })
     .then((result) => {
-        console.log(result.data);
+        console.log(result);
     })
     .catch((err) => {
         console.log(err);

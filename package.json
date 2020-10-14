@@ -1,6 +1,6 @@
 {
     "name": "@tubu/tubuio-sdk-node",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "description": "JavaScript SDK for Tubu",
     "main": "index.js",
     "scripts": {

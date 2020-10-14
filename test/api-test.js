@@ -23,7 +23,7 @@ describe('API', function () {
         expect(api.axios).to.exist;
         expect(api.axios.defaults).to.have.property('baseURL');
         expect(api.axios.defaults.baseURL).to.equal(
-            'https://devservice-dot-dynamic-sun-260208.appspot.com'
+            'https://prodservice-dot-dynamic-sun-260208.appspot.com'
         );
         expect(api.axios.defaults).to.have.property('timeout');
         expect(api.axios.defaults).to.have.property('headers');
@@ -65,7 +65,7 @@ describe('CONTRACT', function () {
         expect(contract.api.axios).to.exist;
         expect(contract.api.axios.defaults).to.have.property('baseURL');
         expect(contract.api.axios.defaults.baseURL).to.equal(
-            'https://devservice-dot-dynamic-sun-260208.appspot.com'
+            'https://prodservice-dot-dynamic-sun-260208.appspot.com'
         );
         expect(contract.api.axios.defaults).to.have.property('timeout');
         expect(contract.api.axios.defaults).to.have.property('headers');
@@ -92,7 +92,7 @@ describe('TUBU', function () {
     let createStub;
     beforeEach(function () {
         tubu = new Tubu('this is the ApiKey');
-        createStub = sinon.stub(tubu, 'createContract');
+        createStub = sinon.stub(tubu, 'contract');
     });
     afterEach(function () {
         createStub.restore();
@@ -102,7 +102,7 @@ describe('TUBU', function () {
         expect(tubu.api.axios).to.exist;
         expect(tubu.api.axios.defaults).to.have.property('baseURL');
         expect(tubu.api.axios.defaults.baseURL).to.equal(
-            'https://devservice-dot-dynamic-sun-260208.appspot.com'
+            'https://prodservice-dot-dynamic-sun-260208.appspot.com'
         );
         expect(tubu.api.axios.defaults).to.have.property('timeout');
         expect(tubu.api.axios.defaults).to.have.property('headers');
@@ -111,8 +111,8 @@ describe('TUBU', function () {
             'this is the ApiKey'
         );
     });
-    it('calls the createContract method with given shortID', function () {
-        tubu.createContract('this is the ShortID');
+    it('calls the contract method with given shortID', function () {
+        tubu.contract('this is the ShortID');
         expect(createStub.calledOnce).to.be.true;
         expect(createStub.args[0]).to.contains('this is the ShortID');
     });
