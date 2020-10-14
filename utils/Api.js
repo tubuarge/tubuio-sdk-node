@@ -25,13 +25,13 @@ class Api {
         if (args)
             return this.axios
                 .get(url, { params: { args } })
-                .then((response) => response.body.data)
+                .then((response) => response.data)
                 .catch((err) => {
                     throw new Error(err.response.data.message);
                 });
         return this.axios
             .get(url)
-            .then((response) => response.body.data)
+            .then((response) => response.data)
             .catch((err) => {
                 throw new Error(err.response.data.message);
             });
@@ -42,7 +42,7 @@ class Api {
         if (tag) url += `/${tag}`;
         return this.axios
             .post(url, data)
-            .then((response) => response.body.data)
+            .then((response) => response.data)
             .catch((err) => {
                 throw new Error(err.response.data.message);
             });
