@@ -13,7 +13,7 @@ const axios = require('axios');
 class Api {
     constructor(token) {
         this.axios = axios.create({
-            baseURL: 'https://prodservice-dot-dynamic-sun-260208.appspot.com',
+            baseURL: 'https://api.tubu.io',
             timeout: 10000,
             headers: { ApiKey: token },
         });
