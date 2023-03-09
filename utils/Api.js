@@ -47,6 +47,16 @@ class Api {
                 throw new Error(err.response.data.message);
             });
     }
+    integrationEvent(shortID, eventName, tag = '') {
+        let url = `/int/events/${eventName}/${shortID}`;
+        if (tag) url += `/${tag}`;
+        return this.axios
+            .post(url, { filter: {}, fromBlock: 0 })
+            .then((response) => response.data)
+            .catch((err) => {
+                throw new Error(err.response.data.message);
+            });
+    }
 }
 
 module.exports = Api;
