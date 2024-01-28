@@ -57,6 +57,34 @@ class Api {
                 throw new Error(err.response.data.message);
             });
     }
+
+    applicationAccountCreate(data='') {
+        let url = `/appAcount/`;
+         return this.axios
+        .post(url, data)
+            .then((response) => response.data)
+            .catch((err) => {
+                throw new Error(err.response.data.message);
+            });
+    }
+    applicationAccountGet(accountID) {
+        let url = `/appAcount/${accountID}`;
+        return this.axios
+            .get(url)
+            .then((response) => response.data)
+            .catch((err) => {
+                throw new Error(err.response.data.message);
+            });
+    }
+    applicationAccountList() {
+        let url = `/appAcount/`;
+        return this.axios
+            .get(url)
+            .then((response) => response.data)
+            .catch((err) => {
+                throw new Error(err.response.data.message);
+            });
+    }
 }
 
 module.exports = Api;
