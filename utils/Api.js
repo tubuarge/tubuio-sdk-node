@@ -47,6 +47,7 @@ class Api {
                 throw new Error(err.response.data.message);
             });
     }
+
     integrationEvent(shortID, eventName, tag = '') {
         let url = `/int/events/${eventName}/${shortID}`;
         if (tag) url += `/${tag}`;
@@ -58,17 +59,18 @@ class Api {
             });
     }
 
-    applicationAccountCreate(data='') {
-        let url = `/appAcount/`;
-         return this.axios
-        .post(url, data)
+    applicationAccountCreate(shortID, data = '') {
+        const url = `/appAcount/${shortID}/account`;
+        return this.axios
+            .post(url, data)
             .then((response) => response.data)
             .catch((err) => {
                 throw new Error(err.response.data.message);
             });
     }
-    applicationAccountGet(accountID) {
-        let url = `/appAcount/${accountID}`;
+
+    applicationAccountGet(shortID, accountID) {
+        const url = `/appAcount/${shortID}/account/${accountID}`;
         return this.axios
             .get(url)
             .then((response) => response.data)
@@ -76,8 +78,9 @@ class Api {
                 throw new Error(err.response.data.message);
             });
     }
-    applicationAccountList() {
-        let url = `/appAcount/`;
+
+    applicationAccountList(shortID) {
+        const url = `/appAcount/${shortID}/account`;
         return this.axios
             .get(url)
             .then((response) => response.data)
