@@ -14,7 +14,7 @@ class Api {
     constructor(token) {
         this.axios = axios.create({
             baseURL: 'https://api.tubu.io',
-            timeout: 10000,
+            timeout: 30000,
             headers: { ApiKey: token },
         });
     }
